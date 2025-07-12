@@ -3,7 +3,7 @@ Add-Type -AssemblyName System.Drawing
 
 # Create form
 $form = New-Object System.Windows.Forms.Form
-$form.Text = "🚀 Git Commit & Push"
+$form.Text = "Git Commit & Push"
 $form.Size = New-Object System.Drawing.Size(400,200)
 $form.StartPosition = "CenterScreen"
 $form.BackColor = [System.Drawing.Color]::FromArgb(245, 245, 255) # Light blueish-white
@@ -53,7 +53,7 @@ if ($dialogResult -eq [System.Windows.Forms.DialogResult]::OK) {
     $commitMessage = $textBox.Text.Trim()
 
     if ($commitMessage -eq "") {
-        [System.Windows.Forms.MessageBox]::Show("⚠ Commit message cannot be empty.","Empty Message",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Warning)
+        [System.Windows.Forms.MessageBox]::Show("Commit message cannot be empty.","Empty Message",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Warning)
         exit
     }
 
@@ -62,14 +62,14 @@ if ($dialogResult -eq [System.Windows.Forms.DialogResult]::OK) {
     try {
         git commit -m "$commitMessage"
     } catch {
-        [System.Windows.Forms.MessageBox]::Show("⚠ Nothing to commit or an error occurred.","Commit Failed",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Error)
+        [System.Windows.Forms.MessageBox]::Show("Nothing to commit or an error occurred.","Commit Failed",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Error)
         exit
     }
 
     try {
         git push
-        [System.Windows.Forms.MessageBox]::Show("✅ Push successful!","Done",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Information)
+        [System.Windows.Forms.MessageBox]::Show(" Push successful!","Done",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Information)
     } catch {
-        [System.Windows.Forms.MessageBox]::Show("❌ Push failed! Check your remote or login.","Push Failed",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Error)
+        [System.Windows.Forms.MessageBox]::Show(" Push failed! Check your remote or login.","Push Failed",[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Error)
     }
 }
