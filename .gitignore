@@ -1,0 +1,37 @@
+# Ignore class files (compiled Java)
+*.class
+
+# Ignore package or compiled directories
+/bin/
+/build/
+/out/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+*~
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: if you sometimes use Eclipse
+.project
+.classpath
+.settings/
+
+# Optional: if you sometimes use IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Optional: if you sometimes use VS Code
+.vscode/
+
+# Optional: Java wrapper files (Gradle/Maven)
+.gradle/
+target/
