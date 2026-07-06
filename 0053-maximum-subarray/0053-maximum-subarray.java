@@ -9,6 +9,7 @@ class Solution {
 
             maxSum = Math.max( maxSum , currentSum ); 
 
+            // This is the Important Step that , it Resets the Sequence of Addition to Zero once if the Current became Negative and Helps to Find the Next Highest Sum by that !!!
             if(currentSum < 0 ){
                 currentSum = 0 ;
             }
