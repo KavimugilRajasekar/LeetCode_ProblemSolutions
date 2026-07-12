@@ -14,7 +14,7 @@ class Solution {
         // Let's Create a New Array-List then Create a Solution by Merging them !!
         List<int[]> result = new ArrayList<>();
         result.add(intervals[0]);
-         for(int i = 1 ; i < intervals.length ; i++){
+         for(int i = 1 ; i < n  ; i++){
             int[] last = result.get(result.size() - 1 );
 
             if(intervals[i][0] <= last[1]){
