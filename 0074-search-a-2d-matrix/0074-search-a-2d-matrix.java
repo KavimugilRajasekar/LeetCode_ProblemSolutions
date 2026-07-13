@@ -14,7 +14,7 @@ class Solution {
             }
         }
 
-        return right;  // Returns the row where target would be inserted
+        return right;  // Returns the row where target would be inserted , if Greate then n-1 , if Lesser then -1 will be return in here !! 
     }
 
     private boolean findRow(int[] row, int target) {
