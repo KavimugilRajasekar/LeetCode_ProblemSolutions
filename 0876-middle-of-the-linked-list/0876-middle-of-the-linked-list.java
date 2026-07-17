@@ -16,15 +16,15 @@ class Solution {
         count++;
         temp = temp.next;
      }   
-    if( count % 2 == 0){
-        count = count / 2 + 1;
-        temp = head;
-        while(temp != null && count != 1){
-            temp = temp.next;
-            count--;
-        }
-        return temp;
-    }else{
+    // if( count % 2 == 0){
+    //     count = count / 2 + 1;
+    //     temp = head;
+    //     while(temp != null && count != 1){
+    //         temp = temp.next;
+    //         count--;
+    //     }
+    //     return temp;
+    // }else{
         count = (int) count / 2 + 1 ;
         temp = head;
         while(temp != null && count != 1){
@@ -32,7 +32,7 @@ class Solution {
             count--;
         }
         return temp;
-    }
+    // }
      
     }
 }
